@@ -1,5 +1,5 @@
 # Objetivo General del Proyecto:
-El objetivo de este proyecto es crear un sistema de criptomonedas de confianza que permita emitir monedas electrónicas, validarlas, evitar el doble gasto y realizar transacciones entre usuarios de una manera segura y simple. El sistema está basado en la idea de un banco central que emite monedas electrónicas (criptocash), y usuarios y comerciantes pueden interactuar con estas monedas.
+El objetivo de este proyecto es crear un sistema de criptomonedas de confianza que permita emitir monedas electrónicas firmadas por un banco usando su clave privada, validarlas, evitar el doble gasto mediante la técnica Pow, para realizar transacciones entre usuarios de una manera segura y simple. El sistema está basado en la idea de un banco central que emite monedas electrónicas (criptocash), usuarios, y comerciantes, los cuales pueden interactuar con estas monedas.
 
 ## Componentes Principales del Proyecto:
 
@@ -53,9 +53,30 @@ El sistema utiliza **firmas digitales**, **curvas elípticas** y técnicas cript
 - **Curvas Elípticas**: Usamos **ECC (Elliptic Curve Cryptography)** con la curva **P-256**, que proporciona un nivel de seguridad elevado con claves relativamente pequeñas.
 - **SHA-256**: La **función de hash SHA-256** se usa para generar resúmenes únicos de los datos de la moneda (como el ID del usuario) antes de ser firmados con la clave privada del banco.
 
-### Interacción con una Base de Datos:
-El uso de SQLite y la persistencia de datos le da al sistema un sentido más práctico y realista, permitiendo almacenar monedas y transacciones de manera que el sistema siga funcionando entre sesiones.
 
-### Visualización de la Blockchain:
-La representación gráfica de la blockchain en tiempo real permite visualizar cómo las monedas se emiten, se transfieren y se registran en el sistema de forma visual e interactiva. Esto ayuda a comprender mejor el concepto de blockchain y las transacciones en un sistema descentralizado.
+# Manual de Instalación
+
+Sigue los pasos a continuación para configurar el entorno y ejecutar el proyecto:
+
+## Requisitos Previos
+Asegúrate de tener instalados:
+- **Git**
+- **Python** (versión 3.x)
+- **Pip** (gestor de paquetes de Python)
+
+---
+
+## Pasos de Instalación
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/alvruigut/CriptoCash.git
+   cd CriptoCash
+   python -m venv venv
+   venv\Scripts\activate
+   pip install -r requirements.txt
+
+# Ejecución
+   ```bash
+  python gui.py
 

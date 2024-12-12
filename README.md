@@ -1,5 +1,5 @@
 # Objetivo General del Proyecto:
-El objetivo de este proyecto es crear un sistema de criptomonedas de confianza que permita emitir monedas electrónicas firmadas por un banco usando su clave privada, validarlas, evitar el doble gasto sin usar el metodo Pow(ya que existe una unidad central, el banco), para realizar transacciones entre usuarios de una manera segura y simple. El sistema está basado en la idea de un banco central que emite monedas electrónicas (criptocash), usuarios, y comerciantes, los cuales pueden interactuar con estas monedas.
+El objetivo de este proyecto es crear un sistema de criptomonedas centralizado que permita emitir monedas electrónicas firmadas digitalmente, para realizar transacciones entre usuarios de una manera segura y simple.
 
 ## Componentes Principales del Proyecto:
 
@@ -46,7 +46,7 @@ El objetivo de este proyecto es crear un sistema de criptomonedas de confianza q
 ## Propósito y Sentido del Proyecto:
 
 ### Implementación Práctica de Conceptos Criptográficos:
-El sistema utiliza **firmas digitales**, **curvas elípticas** y técnicas criptográficas para garantizar que las monedas sean auténticas y seguras, lo cual refleja cómo funcionan las criptomonedas en la vida real (como Bitcoin o Ethereum).
+El sistema utiliza **firmas digitales**, **curvas elípticas** y técnicas criptográficas para garantizar que las monedas sean auténticas y seguras, lo cual refleja cómo funcionan la autorización y validación de criptomonedas en la vida real (como Bitcoin o Ethereum).
 
 #### **Firma Digital**:
 - **Firmas Digitales**: Utilizamos el algoritmo **ECDSA** (Elliptic Curve Digital Signature Algorithm) para firmar las monedas electrónicas generadas por el banco. Esto asegura que las monedas no puedan ser falsificadas.

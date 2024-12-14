@@ -70,10 +70,13 @@ class CryptoCashApp:
         if user_id:
             self.user = User(user_id, self.bank)
             self.user_coin = self.user.withdraw_coin()
-            self.status_label.config(text="Moneda retirada exitosamente", fg="green")  
-            self.pay_button.config(state=tk.NORMAL)  
+            self.status_label.config(text="Moneda retirada exitosamente", fg="green")
+            self.withdraw_button.config(state=tk.DISABLED)  # Deshabilitar el botón
+            self.pay_button.config(state=tk.NORMAL)  # Habilitar el botón de pago
         else:
             self.show_error("Por favor, ingrese un ID de usuario.")
+
+
 
     def send_coin(self):
         if self.user_coin:
@@ -85,7 +88,8 @@ class CryptoCashApp:
                     return
                 payment_message = self.user.send_coin(self.user_coin, self.merchant, receiver_user_id)
                 self.status_label.config(text=payment_message, fg="green") 
-                self.deposit_button.config(state=tk.NORMAL)  
+                self.deposit_button.config(state=tk.NORMAL)  # Habilitar el botón de depósito
+                self.pay_button.config(state=tk.DISABLED)   # Deshabilitar el botón de pago
             else:
                 self.show_error("Por favor, seleccione un Usuario Destino.")
         else:
@@ -96,11 +100,18 @@ class CryptoCashApp:
             receiver_user_id = self.receiver_user_id_combobox.get() 
             deposit_message = self.merchant.deposit_coin(self.user_coin, self.user.user_id, receiver_user_id)
             self.status_label.config(text=deposit_message, fg="green")  
-            self.deposit_button.config(state=tk.DISABLED)  
+            self.deposit_button.config(state=tk.DISABLED)  # Deshabilitar el botón de depósito
+
+            # Reactivar botones de "Retirar Moneda" y "Hacer Pago"
+            self.withdraw_button.config(state=tk.NORMAL)
+            self.pay_button.config(state=tk.NORMAL)
 
             self.update_transaction_history()
         else:
             self.show_error("No hay moneda para depositar.")
+
+
+
 
     def show_error(self, message):
         """Muestra un mensaje de error en la etiqueta de estado con color rojo."""

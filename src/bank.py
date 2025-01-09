@@ -7,7 +7,7 @@ class Bank:
         self.db = Database()  
         self.private_key = ECC.generate(curve='P-256')
         self.public_key = self.private_key.public_key()
-
+#cambio 1
     def get_public_key(self):
         """Devuelve la clave pública del banco"""
         return self.public_key.export_key(format='PEM')

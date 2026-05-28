@@ -1,6 +1,8 @@
 # Objetivo General del Proyecto:
 El objetivo de este proyecto es crear un sistema de criptomonedas centralizado que permita emitir monedas electrónicas firmadas digitalmente, para realizar transacciones entre usuarios de una manera segura y simple.
 
+![Interfaz gráfica del proyecto](images/gui.png)
+
 ## Componentes Principales del Proyecto:
 
 ### Banco Central:
